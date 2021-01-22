@@ -2,7 +2,8 @@ class CreateListings < ActiveRecord::Migration[6.0]
   def change
     create_table :listings do |t|
       t.string :title
-      t.integer :date_posted
+      t.string :image
+      t.string :date_posted
       t.string :description
       t.integer :price
       t.integer :num_of_guests

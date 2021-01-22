@@ -11,14 +11,15 @@ class ListingsController < ApplicationController
     end
 
     def listing_params
-        params.permit(:title, 
-            :date_posted, 
-            :description, 
-            :price, 
-            :num_of_guests, 
+        params.permit(
+            :title,
+            :date_posted,
+            :description,
+            :price,
+            :num_of_guests,
             :size,
             :location,
-            :owner, 
+            :owner,
             :likes,
             :comment,
             :wait_staff,
