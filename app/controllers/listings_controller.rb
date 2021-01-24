@@ -10,8 +10,17 @@ class ListingsController < ApplicationController
         render json: listing
     end
 
+    def update
+        listing = Listing.find(params[:id])
+        listing.update(listing_params)
+        render json: listing
+    end
+
+    private
+
     def listing_params
         params.permit(
+            :id,
             :title,
             :date_posted,
             :description,
