@@ -22,6 +22,6 @@ rose = Listing.create(title:  " RoseCliff",  image: "https://lostnewengland.com/
 Listing.create(title: "Marble House" ,  image:"https://media-cdn.tripadvisor.com/media/photo-s/03/63/85/ed/marble-house.jpg",date_posted:"9/02/2020", description: "best trip ever" , price: 340000, num_of_guests: 20, size: 3002 , location: "South Africa", owner:"Mads Mikkelsen" , likes: 43234, comment: "THE BEST", wait_staff: true , hot_tub: false, pool: true )
 Listing.create(title: "Rough Point",  image: "https://blog.hoganassociatesre.com/wp-content/uploads/2016/07/870364645_5228a2943c.jpg" ,date_posted:"10/3/2020", description: "OMG" , price: 1200000, num_of_guests: 44, size: 33, location: "Florida", owner: "Johnny Depp", likes: 234333 , comment: "OMG", wait_staff: true, hot_tub: true, pool: true )
 
-Booking.create(dates: "1/23/2021", total_price: 30000, user: luke, listing: hill )
-Booking.create(dates: "3/2/2021", total_price:500000, user: bob, listing:rose )
-Booking.create(dates: "2/14/2021", total_price:400034, user: rachel, listing: breaker)
+Booking.create(check_in_date: "1/23/2021", check_out_date: "01/25/2021", number_of_nights: 2, total_price: 200000, user: luke, listing: hill )
+Booking.create(check_in_date: "3/2/2021", check_out_date: "3/10/2021", number_of_nights: 8, total_price: 4000000, user: bob, listing:rose )
+Booking.create(check_in_date: "2/14/2021", check_out_date: "2/15/2021", number_of_nights: 1, total_price: 300000, user: rachel, listing: breaker)

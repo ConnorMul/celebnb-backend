@@ -16,7 +16,9 @@ ActiveRecord::Schema.define(version: 2021_01_21_220052) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "dates"
+    t.string "check_in_date"
+    t.string "check_out_date"
+    t.integer "number_of_nights"
     t.integer "total_price"
     t.bigint "user_id", null: false
     t.bigint "listing_id", null: false
