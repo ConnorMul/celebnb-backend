@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_143343) do
     t.string "image"
     t.string "date_posted"
     t.string "description"
-    t.string "price"
+    t.integer "price"
     t.integer "num_of_guests"
     t.integer "size"
     t.string "location"
