@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_220052) do
+ActiveRecord::Schema.define(version: 2021_01_26_143343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2021_01_21_220052) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string "person"
+    t.string "text"
+    t.bigint "listing_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["listing_id"], name: "index_comments_on_listing_id"
+  end
+
   create_table "listings", force: :cascade do |t|
     t.string "title"
     t.string "image"
@@ -39,7 +48,6 @@ ActiveRecord::Schema.define(version: 2021_01_21_220052) do
     t.string "location"
     t.string "owner"
     t.integer "likes"
-    t.string "comment"
     t.boolean "wait_staff"
     t.boolean "hot_tub"
     t.boolean "pool"
@@ -56,4 +64,5 @@ ActiveRecord::Schema.define(version: 2021_01_21_220052) do
 
   add_foreign_key "bookings", "listings"
   add_foreign_key "bookings", "users"
+  add_foreign_key "comments", "listings"
 end

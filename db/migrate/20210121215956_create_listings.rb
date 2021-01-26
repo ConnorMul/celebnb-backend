@@ -11,7 +11,6 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :location
       t.string :owner
       t.integer :likes
-      t.string :comment
       t.boolean :wait_staff
       t.boolean :hot_tub
       t.boolean :pool
