@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :date_posted
       t.string :description
-      t.integer :price
+      t.string :price
       t.integer :num_of_guests
       t.integer :size
       t.string :location
