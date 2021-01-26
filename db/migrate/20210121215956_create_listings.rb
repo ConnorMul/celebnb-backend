@@ -14,6 +14,8 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.boolean :wait_staff
       t.boolean :hot_tub
       t.boolean :pool
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end
