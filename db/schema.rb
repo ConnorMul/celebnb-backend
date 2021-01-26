@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2021_01_26_143343) do
     t.boolean "wait_staff"
     t.boolean "hot_tub"
     t.boolean "pool"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

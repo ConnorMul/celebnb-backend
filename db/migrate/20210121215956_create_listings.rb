@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :date_posted
       t.string :description
-      t.integer :price
+      t.string :price
       t.integer :num_of_guests
       t.integer :size
       t.string :location
@@ -14,6 +14,8 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.boolean :wait_staff
       t.boolean :hot_tub
       t.boolean :pool
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

@@ -30,9 +30,11 @@ class ListingsController < ApplicationController
             :location,
             :owner,
             :likes,
-            :comment,
             :wait_staff,
             :hot_tub,
-            :pool)
+            :pool,
+            :latitude,
+            :longitude
+        )
     end
 end
